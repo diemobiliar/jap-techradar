@@ -1,137 +1,116 @@
-# Project Boilerplate
+# Motivation
 
-This project contains a template to use when creating a new project. It comes with all the standard files which there is expected to be in an open source project on Github. 
+At [Zalando](http://zalando.de), we maintain a [public Tech
+Radar](http://zalando.github.io/tech-radar/) to help our engineering teams
+align on technology choices. It is based on the [pioneering work
+by ThoughtWorks](https://www.thoughtworks.com/radar).
 
-## How to use
+This repository contains the code to generate the visualization:
+[`radar.js`](/docs/radar.js) (based on [d3.js v4](https://d3js.org)).
+Feel free to use and adapt it for your own purposes.
 
-1. Clone this project and copy the files into your own project
-2. Start developing!
-3. Ensure you are in compliance with Mobiliar Open-Source Developer Guide 
-4. If in doubt, get in touch with opensource@mobi.ch
+## Usage
 
-## Readme template
+1. include `d3.js` and `radar.js`:
 
-Below you can find a complete readme template for a project (based on [work](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) by [@PurpleBooth](https://github.com/PurpleBooth)), this will help you communicate the vision and goals of the project as well as answering common questions from future contributors.
-
-The readme file is the single most important documentation of your project, so make sure you spend time on giving a great first impression to new users and provide the needed information to interested contributors.
-
-
----- 
-
-```
-Readme.md template below, when setup is complete, delete all content above this.
+```html
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://zalando.github.io/tech-radar/release/radar-0.6.js"></script>
 ```
 
+2. insert an empty `svg` tag:
 
-# _projectname_
-
-_description_
-
-Describe what this project does. Keep this language human and friendly, so avoid internal references, acronyms and if you 
-have dependencies, provide a direct link to these.
-
-When describing features of your project, remember to explain why these are a benefit and advantage to the user:
-
-```
-This project allows you to scale X (feature) in a fast and predictable way (benefit) - meaning you will use fewer resources and can be confident in your X environment (Advantage).
+```html
+<svg id="radar"></svg>
 ```
 
-Think about your project as a product, consider who your audience is, and how your decisions affect the number of potential users, below is a handy checklist of things to consider before open sourcing any code. 
+3. configure the radar visualization:
 
-- **Avoid internal dependencies** Obviously projects that require Mobi specific infrastructure, configuration or process have very limited use to anyone outside die Mobiliar. 
-- **Avoid narrow usecases** Does this solve a Mobiliar-only problem or does it have broader application - are there things you could change to make it a more general product
-- **Have a Product vision** Do you know where you want to take this product? - then be open about it so future contributors are aware. Being opinionated is great and it helps set expectations and the direction for the project
-- **Take ownership** Are you are benevolent dictator or open to anything? - consider how you will interact with future contributors who expect you to be an active maintainer
-- **Safe defaults** How do people get up and running - are there a lot of ceremony involved or can you provide a simple out of the box experience, so it is easy for users to evaluate your project
-
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-```
-If possible, provide a quick exemple of how to get this running with minimal effort, so anyone curious can get up and running as fast as possible 
-```
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+```js
+radar_visualization({
+  svg_id: "radar",
+  width: 1450,
+  height: 1000,
+  colors: {
+    background: "#fff",
+    grid: "#bbb",
+    inactive: "#ddd"
+  },
+  title: "My Radar",
+  quadrants: [
+    { name: "Bottom Right" },
+    { name: "Bottom Left" },
+    { name: "Top Left" },
+    { name: "Top Right" }
+  ],
+  rings: [
+    { name: "INNER",  color: "#93c47d" },
+    { name: "SECOND", color: "#b7e1cd" },
+    { name: "THIRD",  color: "#fce8b2" },
+    { name: "OUTER",  color: "#f4c7c3" }
+  ],
+  print_layout: true,
+  entries: [
+   {
+      label: "Some Entry",
+      quadrant: 3,          // 0,1,2,3 (counting clockwise, starting from bottom right)
+      ring: 2,              // 0,1,2,3 (starting from inside)
+      moved: -1             // -1 = moved out (triangle pointing down)
+                            //  0 = not moved (circle)
+                            //  1 = moved in  (triangle pointing up)
+   },
+    // ...
+  ]
+});
 ```
 
-### And coding style tests
+Entries are positioned automatically so that they don't overlap.
 
-Explain what these tests test and why
+As a working example, you can check out `docs/index.html` &mdash; the source of our [public Tech
+Radar](http://zalando.github.io/tech-radar/).
+
+## Local Development
+
+1. install dependencies with yarn (or npm):
 
 ```
-Give an example
+yarn 
 ```
 
-## Deployment
+2. start local dev server:
 
-Add additional notes about how to deploy this on a live system
+```
+yarn start
+```
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our process for submitting pull requests to us, and please ensure
-you follow the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. 
-
-## Authors
-
-* **Your Name** - [your home page](https://your-home-page.com/)
-
-See also the list of [contributors](CONTRIBUTORS) who participated in this project.
+3. your default browser should automatically open and show the url
+ 
+```
+http://localhost:3000/
+```
 
 ## License
 
-This project is licensed under the LGPL - see the [LICENSE.md](LICENSE.md) file for details
+```
+The MIT License (MIT)
 
-## Acknowledgments
-Acknowledge Peopel helping you build this projekt.
-* Thanks to [@PurpleBooth](https://github.com/PurpleBooth) for the original readme
-* Thanks to the [@zalando/Nakadi](https://github.com/zalando/nakadi) project for Contribution file
-* Thanks to [@SteveMao](https://github.com/stevemao) for [Issue templates](https://github.com/stevemao/github-issue-templates)
-* Thanks to [@perploug](https://github/perploug) for the zalando [new-project](https://github.com/zalando-incubator/new-project) which this template is based on.
+Copyright (c) 2017-2022 Zalando SE
 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
