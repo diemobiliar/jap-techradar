@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 
-// Copyright (c) 2017 Zalando SE
+// Copyright (c) 2022 Mobiliar SE
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -19,6 +19,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
 
 
 function radar_visualization(config, jsonFileData) {
@@ -261,7 +262,7 @@ for (var i = 0; i < config.entries.length; i++) {
         .text(config.rings[i].name)
         .attr("y", -rings[i].radius + 62)
         .attr("text-anchor", "middle")
-        .style("fill", "#FF0000")
+        .style("fill", "#e5e5e5")
         .style("font-family", "Arial, Helvetica")
         .style("font-size", "42px")
         .style("font-weight", "bold")
@@ -310,13 +311,13 @@ for (var i = 0; i < config.entries.length; i++) {
         ))
         .text(config.quadrants[quadrant].name)
         .style("font-family", "Arial, Helvetica")
-        .style("font-size", "23px");
+        .style("font-size", "18px");
       for (var ring = 0; ring < 4; ring++) {
         legend.append("text")
           .attr("transform", legend_transform(quadrant, ring))
           .text(config.rings[ring].name)
           .style("font-family", "Arial, Helvetica")
-          .style("font-size", "17px")
+          .style("font-size", "12px")
           .style("font-weight", "bold");
         legend.selectAll(".legend" + quadrant + ring)
           .data(segmented[quadrant][ring])
@@ -331,7 +332,7 @@ for (var i = 0; i < config.entries.length; i++) {
               .attr("id", function(d, i) { return "legendItem" + d.id; })
               .text(function(d, i) { return d.id + ". " + d.label; })
               .style("font-family", "Arial, Helvetica")
-              .style("font-size", "14px")
+              .style("font-size", "11px")
               .on("mouseover", function(d) { showBubble(d); highlightLegendItem(d); })
               .on("mouseout", function(d) { hideBubble(d); unhighlightLegendItem(d); });
       }
