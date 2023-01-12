@@ -1,9 +1,8 @@
 {
-  "name": "zalando-tech-radar",
-  "version": "2018.5.0",
+  "name": "mobiliar-tech-radar",
+  "version": "1.0",
   "description": "Visualizing our technology choices",
-  "homepage": "https://github.com/zalando/tech-radar#readme",
-  "repository": "https://github.com/zalando/tech-radar.git",
+  "repository": "https://github.com/diemobiliar/jap-techradar",
   "license": "MIT",
   "directories": {
     "doc": "docs"
