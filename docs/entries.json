@@ -3,7 +3,7 @@
         "quadrant": 0,
         "ring": 0,
         "label": "Python",
-        "link": "https://www.python.org/", 
+        "link": "https://www.python.org/",
         "active": true,
         "moved": 0
       },
@@ -74,7 +74,7 @@
       {
         "quadrant": 0,
         "ring": 3,
-        "label": ".Net",
+        "label": ".NET",
         "link": "https://dotnet.microsoft.com/en-us/",
         "active": true,
         "moved": 0
@@ -82,7 +82,7 @@
       {
         "quadrant": 0,
         "ring": 3,
-        "label": "cobol",
+        "label": "Cobol",
         "link": "https://developer.ibm.com/languages/cobol/",
         "active": true,
         "moved": 0
@@ -98,7 +98,7 @@
       {
         "quadrant": 1,
         "ring": 0,
-        "label": "Azure Functions", 
+        "label": "Azure Functions",
         "link": "https://azure.microsoft.com/en-us/products/functions/",
         "active": true,
         "moved": 0
@@ -106,7 +106,7 @@
       {
         "quadrant": 1,
         "ring": 0,
-        "label": "Azure API Management",
+        "label": "Azure APIM",
         "link": "https://azure.microsoft.com/en-us/products/api-management/",
         "active": true,
         "moved": 0
@@ -194,7 +194,7 @@
        {
         "quadrant": 1,
         "ring": 2,
-        "label": "Azure Web Pubsup",
+        "label": "Azure Web PubSub",
         "link": "https://azure.microsoft.com/en-us/products/web-pubsub/",
         "active": true,
         "moved": 0
@@ -210,7 +210,7 @@
       {
         "quadrant": 1,
         "ring": 2,
-        "label": "Sem Grep",
+        "label": "Semgrep",
         "link": "https://semgrep.dev/",
         "active": true,
         "moved": 0
@@ -346,7 +346,7 @@
       {
         "quadrant": 3,
         "ring": 0,
-        "label": "Static Frontends",
+        "label": "Single Page Apps",
         "active": true,
         "moved": 0
       },
@@ -395,6 +395,13 @@
         "ring": 1,
         "label": "Monorepo",
         "link": "https://monorepo.tools/",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 3,
+        "ring": 1,
+        "label": "Web Components",
         "active": true,
         "moved": 0
       },
