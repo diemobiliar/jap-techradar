@@ -1,5 +1,7 @@
 # Die Mobiliar Tech Radar
 
+The Tech Radar is published [here](https://diemobiliar.github.io/jap-techradar/).
+
 Based on the pioneering work of ThoughtWorks, our Tech Radar sets out the changes in technologies that are interesting in software development — changes that we think our engineering teams should pay attention to and use in their projects.
 
 The Tech Radar is a tool to inspire and support Engineering teams at La Mobilière to pick the best technologies for new projects; it provides a platform to share knowledge and experience in technologies, to reflect on technology decisions and continuously evolve our technology landscape.
