@@ -3,7 +3,7 @@
         "quadrant": 0,
         "ring": 0,
         "label": "Python",
-        "link": "https://www.python.org/", 
+        "link": "https://www.python.org/",
         "active": true,
         "moved": 0
       },
@@ -74,7 +74,7 @@
       {
         "quadrant": 1,
         "ring": 0,
-        "label": "Azure Functions", 
+        "label": "Azure Functions",
         "link": "https://azure.microsoft.com/en-us/products/functions/",
         "active": true,
         "moved": 0
@@ -82,7 +82,7 @@
       {
         "quadrant": 1,
         "ring": 0,
-        "label": "Azure API Management",
+        "label": "Azure APIM",
         "link": "https://azure.microsoft.com/en-us/products/api-management/",
         "active": true,
         "moved": 0
@@ -154,7 +154,7 @@
       {
         "quadrant": 1,
         "ring": 0,
-        "label": "Databricks",
+        "label": "Azure Databricks",
         "link": "https://www.databricks.com/",
         "active": true,
         "moved": 0
@@ -419,6 +419,29 @@
         "ring": 3,
         "label": "Hybrid cloud",
         "link": "https://www.netapp.com/hybrid-cloud/what-is-hybrid-cloud/#:~:text=Hybrid%20cloud%20refers%20to%20a,orchestration%20among%20the%20various%20platforms.",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 2,
+        "ring": 2,
+        "label": "AI-assisted coding",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 0,
+        "ring": 1,
+        "label": "SharePoint Framework (SPFx)",
+        "link": "https://learn.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 1,
+        "label": "Azure Machine Learning",
+        "link": "https://azure.microsoft.com/en-us/products/machine-learning/",
         "active": true,
         "moved": 0
       }
