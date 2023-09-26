@@ -177,11 +177,11 @@
       },
       {
         "quadrant": 1,
-        "ring": 2,
+        "ring": 1,
         "label": "Azure Container Apps",
         "link": "https://azure.microsoft.com/en-us/products/container-apps/",
         "active": true,
-        "moved": 0
+        "moved": 1
       },
       {
         "quadrant": 1,
@@ -249,11 +249,11 @@
       },
        {
         "quadrant": 2,
-        "ring": 1,
+        "ring": 0,
         "label": "Renovate",
         "link": "https://docs.renovatebot.com/",
         "active": true,
-        "moved": 0
+        "moved": 1
       },
        {
         "quadrant": 2,
@@ -400,11 +400,11 @@
       },
       {
         "quadrant": 3,
-        "ring": 2,
+        "ring": 1,
         "label": "SBOM",
         "link": "https://www.cisa.gov/sbom",
         "active": true,
-        "moved": 0
+        "moved": 1
       },
       {
         "quadrant": 3,
@@ -424,10 +424,10 @@
       },
       {
         "quadrant": 2,
-        "ring": 2,
+        "ring": 1,
         "label": "AI-assisted coding",
         "active": true,
-        "moved": 0
+        "moved": 1
       },
       {
         "quadrant": 0,
