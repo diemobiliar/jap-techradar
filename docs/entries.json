@@ -40,7 +40,7 @@
         "moved": 0
       },
       {
-        "quadrant": 1,
+        "quadrant": 0,
         "ring": 0,
         "label": "Spring",
         "link": "https://spring.io/",
@@ -48,7 +48,7 @@
         "moved": 0
       },
       {
-        "quadrant": 1,
+        "quadrant": 0,
         "ring": 3,
         "label": "JEE",
         "link": "https://jakarta.ee/",
