@@ -40,6 +40,22 @@
         "moved": 0
       },
       {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Spring",
+        "link": "https://spring.io/",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 3,
+        "label": "JEE",
+        "link": "https://jakarta.ee/",
+        "active": true,
+        "moved": 0
+      },
+      {
         "quadrant": 0,
         "ring": 0,
         "label": "Go",
@@ -57,11 +73,11 @@
       },
       {
         "quadrant": 0,
-        "ring": 1,
+        "ring": 0,
         "label": "Kotlin",
         "link": "https://kotlinlang.org/",
         "active": true,
-        "moved": 0
+        "moved": 1
       },
       {
         "quadrant": 0,
@@ -169,11 +185,11 @@
       },
        {
         "quadrant": 1,
-        "ring": 2,
+        "ring": 0,
         "label": "Azure Web Pubsup",
         "link": "https://azure.microsoft.com/en-us/products/web-pubsub/",
         "active": true,
-        "moved": 0
+        "moved": 1
       },
       {
         "quadrant": 1,
@@ -257,11 +273,11 @@
       },
        {
         "quadrant": 2,
-        "ring": 2,
+        "ring": 1,
         "label": "Azure Bicep",
         "link": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep",
         "active": true,
-        "moved": 0
+        "moved": 1
       },
        {
         "quadrant": 2,
@@ -408,11 +424,11 @@
       },
       {
         "quadrant": 3,
-        "ring": 2,
+        "ring": 1,
         "label": "SLSA",
         "link": "https://slsa.dev/",
         "active": true,
-        "moved": 0
+        "moved": 1
       },
       {
         "quadrant": 3,
@@ -444,5 +460,13 @@
         "link": "https://azure.microsoft.com/en-us/products/machine-learning/",
         "active": true,
         "moved": 0
+      },
+      {
+        "quadrant": 2,
+        "ring": 0,
+        "label": "Oracle DBs",
+        "link": "https://www.oracle.com/ch-de/database/",
+        "active": true,
+        "moved": 1
       }
 ]
